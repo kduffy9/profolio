@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+    <title>KZD - Scarlett Store Project</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--Google Font-->
+     <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--Stylesheet-->
+     <link rel="stylesheet" type="text/css" href="profolioSytle.css">
+    <body>
+     <header>
+      <nav>
+        <ul>
+            <li id="back"><a href="profolio.html#projects"> << Back</a></li>
+         </ul>    
+      </nav>
+</header>
+     <div class="projectContent">
+      <div id="scarlett-title" class="titleCircle">
+          
+        <h1 class="pTitle">Scarlett Store</h1>
+        <p  class="pDetails"> Freelance Project</p>
+        </div>
+        
+      <img src="scarlett.png"  alt="Scarlett Store Home Page"> 
+         <div class="summery">
+             <h3><b>Project Summery</b></h3>
+          <p>A back-end focused project developed using PHP and MySQL for an online cosmestic store operated in Myanmar.</p>
+          <p>The design and theme is provided by Colorrib.</p>
+             <p><a id="view" href="https://www.scarlettstore.us" target="_blank">Visit Site >></a></p>
+        </div>
+    </div>
+    </body>
+  <a href="#scarlett-title">  <i id="top" class="fas fa-angle-double-up"></i></a>
+<footer>
+    <p> <b>Khine Zar Duffy &copy;2020 </b></p>
+    </footer>
+<script>
+    window.onscroll = function () {scroll()};
+    function scroll(){
+        if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+         document.getElementById("back").style.backgroundColor = "rgba(1, 0, 0 , 0.1)";
+         document.getElementById("top").style.display = "block";
+        }
+        else{
+            document.getElementById("back").style.backgroundColor = "transparent";
+            document.getElementById("top").style.display = "none";
+        }
+    }
+   
+    </script>
+</html>

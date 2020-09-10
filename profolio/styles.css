@@ -1,0 +1,100 @@
+body{
+    background-color:gainsboro;
+    
+}
+.banner{
+    width: 800px;
+    height: 150px;
+    margin: auto;
+  
+    background-color: #fff;
+}
+
+#logo{
+    background-color: lightgoldenrodyellow;
+    width: 150px;
+    height: 150px;
+    float: left;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.donut {
+    float: left;
+    margin: 0;
+    position: relative;
+    animation-name: donuts;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    
+}
+.white{
+    position: relative;
+    animation-name: white;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+}
+.pink{
+  
+    animation-name: pink;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+}
+.choc{
+    
+    animation-name: choc;
+    animation-iteration-count: 2;
+    animation-duration: 2s;
+}
+.title{
+    float:left;
+    position: relative;
+    margin: 10px;
+    font-family: 'Luckiest Guy', cursive;
+    color: chocolate;
+    text-align: center;
+    animation-name: title;
+    animation-duration: 2s;
+
+  
+}
+#sub{
+    animation-name: sub;
+    color: red;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes title{
+   0%{transform: translate(-500px,-800px);opacity: 0;}
+    80%{opacity: 1;}
+   
+}
+@keyframes sub{
+  
+    50% {transform: scale(1.2)}
+   
+}
+@keyframes donuts{
+    0%{transform: translate(-100px);opacity: 0;}
+    80% {transform: scale(1.2); opacity: 1;}
+   
+}
+@keyframes pink{
+    20%{transform: rotate(90deg);}
+}
+@keyframes white{
+    0%{top:0px;}
+    50%{top: 20px;}
+    100%{top: 0px;}
+}
+@keyframes choc{
+    20%{transform: scale(1.2);}
+}
+@keyframes logo{
+    20%{background-color: palegoldenrod;}
+    50%{background-color: lightblue}
+    80%{background-color: pink}
+    100%{background-color: lightgoldenrodyellow}
+}

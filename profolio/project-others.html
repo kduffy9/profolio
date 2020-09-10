@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>KZD - Other Projects</title>
+   <!--google Font-->
+     <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--Stylesheet-->
+     <link rel="stylesheet" type="text/css" href="profolioSytle.css">
+    </head>
+    <body>
+     <header>
+      <nav>
+        <ul>
+            <li id="back"><a href="profolio.html#projects"><< Back</a></li>
+         </ul>    
+      </nav>
+</header>
+     <div class="projectContent">
+           <div id="outbreak" class="titleCircle">
+          
+        <h1 class="pTitle">Zombie Outbreak</h1>
+        <p  class="pDetails"> Javascript</p>
+        </div>
+         <img src="outbreak.png"  alt="Zombie outbreak"> 
+         <div class="summery">
+             <h3><b>Problem Description</b></h3>
+          <p>There is a zombie outbreak. Humans are becoming infected at an alarming rate. You are a scientist who can save humanity. You discover three characteristics of the outbreak:</p>
+          <p>THumans recruit other humans to fight zombies._ If an empty space(.) is surrounded by three or more humans(h), the empty space becomes a human. For example, consider a grid `x` and `y` coordinates for column and row respectively. Humans are at positions 0,0; 1,2; and 2,2. Since the empty space at 1,1 is surrounded by at least three humans, then that space will become a human after one day:</p>
+             <p>Before:</p>
+             <p>h..</p> 
+             <p>..h</p>
+             <p>..h</p>
+            <p>After:</p>
+             <p>h..</p>
+             <p>.hh</p>
+             <p>..h</p>
+             <p>Zombies infect humans._ A human will become a zombie(z) if the human is surrounded by three or more zombies. For example, the human at coordinate 1,1 will become a zombie after one day:</p>
+             <p>Before:</p>
+             <p>...</p>
+             <p>zh.</p>
+             <p>zz.</p>
+             <p>After:</p>
+             <p>...</p>
+             <p>zz.</p>
+             <p>zz.</p>
+             <p>Zombies die without support and food._ If a zombie is surrounded by at least one other zombie _and_ at least one human, then the zombie will survive until the next day. Otherwise, the zombie will die, and its space will become an empty space. For example, the zombie at 1,1 will die, because no other zombie is next to it. After one day, the zombie dies, and it becomes an empty space:</p>
+             <p>Before:</p>
+             <p>...</p>
+             <p>hz.</p>
+             <p>...</p>
+             <p>After:</p>
+             <p>...</p>
+             <p>h..</p>
+             <p>...</p>
+             <p>After some research, you derive a map that represents an area of the world that has a serious outbreak. The map is given by this string:</p>
+
+<p class="problem">"..h..h.h.h.hh..z.zh...h..z.h.........h.......h..z.\nz.h.........hhh....z....h....zzhh.....h.h.........\n..hh......z.zhhz.z.......z..z.z.zzz...h.z..z...z..\nh....z....h.zz.zz.....zz...zzh..h....h..hzhh...zzz\nzh...h.zh..h......z.zz....zh....h...hz......h.zh.h\n..h....zz.zz.z..hhzz...z..zzh......h...hz.hh.z.z..\n.z...zhh...........zh.....hzz....z.z...hz.hzzz..h.\nhh....z.z.h...hh...zzzh.hz.....z.hz.hz...z.z.h...z\n...z.....hh.......z....zhzzzhzzzz..hzh.zzz..hh.z.z\nhzh...hh..zz.hh.hh..z.z.h..z...z..h........z..hz..\nz....hh.h.....h.h.zh.zz.h..h.z.....h..h.....zh.h..\nh..hhz........hz.h..h.h...z..z....z.h.....hhz.z...\n..h...hh.hzzhhzz..h...zh.....hz.h....z....hhz.zz..\nzh..zh..hh...h..h.hzh..zz.z.......zhz....zhh...z..\nhzh.h...h..zz...h.zhhz..z...z....hh.z.h...zz..h..z\nh..hh.z.z..h....z...z.z..z..z...hh.h.z.z.z.....zh.\n.hzz.zzzz..hh.z.hz.zzz....z...z.h..z.z.zz.h..zz..z\nzh.......z......h.z..h.....hh.h.zhhz.z.zz.zh....h.\n.h..z.hz.zzh....z......h.zhh..hz..zz.h..z......zzz\n..zzz....z.hh.z..hzz.zz..zh.z...hzh...z.h.h...zhz.\n........hh......hzzhhzz..zzzh..h.zz.z..zhzz...h..z\n.z....h....h...zz.z.hhzz.....zh...hz.zhh...z.....h\nz...zh...zzz.h.h..h..z.hzzz.h.z.h.zzzzh...h.z..hz.\n...z..h.....h.z.zz.h.z.z..h..zz.zz.z..h...z...hz..\n..zzz.zhzzhz.z.......h.h...hhzzzh.z.........z..h..\n..hz...hh.z.z..h...h..zhh...h.z.z......z...h..z...\n.hh..........h.z....h.hh...hz.h.hhh..hh........hz.\nz.zz.zhh..h.hz...h..zh.hz......h.hh.......h...hz..\nz.hh.hhz...zhhh.....h.h.h.h...hh.z..z.z.zh..hhh.h.\n.z...z...hhhhz...zz.z.z......zh......z.h.....hzhh.\n.zh.zzzhzhh.hz...z.h..h.hz.hz..z..z...h.h.h...h.h.\n..zh.hzh..zzh.hh.h.....hz...z..h.hz....h.h..h..hz.\nz....h..z.z.......zhh..z....h.h..z.zh..z...hz.z.h.\nz.z.h..h...zh.zzzhh.z.....zhzhz.zz..h.hzh....h....\n....hz.z.hh..h..z...h...h..h...h..z..z......zh.z..\n..z..zh.h.hz.z.h.h.z.z.....z..h..z..h.......hhzhz.\nzh......hz..h.z...zzh....h..hzhh..h..hh...hh.z....\nz..hz.......hh.....h.hhhhz.hz.h....zhz....hz.z....\nz.zz.z.z..hh......z...h......hzh...h.hh.z.h..h....\nzzzz.h...hhzzhzh.......hhh.z.z.....z...zz.zh..z...\n..h..hhh..h.hhzhz.h..z.h..z.h........zzz......z..h\n..zh.....hhhhhz..hh.....zz..z...hhh.....z......z.z\n.z.h.hhz.zz.......hh.z.hh..z...hzz..h.z.z...h...h.\n.zz........h..hh.h.zh.h.hhhh..z...z..h..hzhz..hzh.\n.z.z.....zhhh..h...z.h...h...z.hh..hhzzzh.zh......\nh.hz..z.z.hhhhh.zh.h......z.hz.hh.....z..z...hz.h.\n...h....z.zzzh.z.zz......hz.zz.....z.h.zz.z......z\n.z.z.....h..z.zz..zhzh..z.zhzz..zzh..zz.z..z....hh\n..z.z.h.....z.h..z.h.hz...h....z...h..h.h..zhh...h\nh.hh.h...h...hzz..hh....hz.h..z..zz....hz.zhzz..h.\n"</p>
+             <p>Write the outbreak program</p>
+             <p>Run a simulation for one year (t=365).</p>
+             <p>Visualize the transitions in the web page, from one day to the next. In other words, display the grid on the page, perform transitions for every element of the grid, add a delay (e.g., 100 ms), display the new grid, repeat.</p>
+             <p>How many humans remain after 365 days? How many zombies? Output these numbers on your page at the end of the simulation.</p>
+             <p><a href="marbles.html" target="_blank">View Program >></a></p>
+        </div>
+         
+         
+      <div id="marbles" class="titleCircle">
+          
+        <h1 class="pTitle">Marbles</h1>
+        <p  class="pDetails"> Javascript</p>
+        </div>
+        
+      <img src="marbles.png"  alt="Marbles"> 
+         <div class="summery">
+             <h3><b>Problem Description</b></h3>
+          <p>You and some friends are playing a game of marbles. But this game of marbles is different. There are seven colors of marbles on a table: red, orange, yellow, green, blue, indigo, violet. You pick one of the colors. Then, all the marbles are placed in a single row in random order. If a large marble is next to a small marble of the same color, then those two marbles are removed from the row, and the marbles are squeezed together to maintain the row. The process repeats, until no marbles can be removed from the row. The winner is the person with the most marbles on the table at the end.</p>
+          <p>The order of the marbles is given by letters. An uppercase letter indicates a large marble. A lowercase letter indicates a small marble. Here is a sample ordering with a few marbles:
+          </p>
+          <q>RRbbGgBBRrBrb</q>
+            <p>You choose _red_. The game proceeds, and marbles are removed...</p>
+             <p>Initially ==> RRbbGgBBRrBrb</p>
+             <p>Remove Gg ==> RRbbBBRrBrb</p>
+             <p>Remove Rr ==> RRbbBBBrb</p>
+             <p>Remove bB ==> RRbBBrb</p>
+             <p>Remove bB ==> RRBrb</p>
+             <p>Game ends</p>
+             <p>It is not possible to reduce the row of marbles any further. You win with a total of three red marbles (2 large, 1 small). Blue has a total of two marbles (1 large, 1 small).</p>
+             <p>Prior to the actual game, you find the ordering of the marbles written on a piece of paper:</p>
+
+<p class="problem">"rrooyyggbbiivvRrRrBggbbiivvRrRrBvIiGggGOOrRYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggOogGoOgrrvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyvIiGggGOOrRrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyggbbiivvRrRrBvIiGggGOOrRYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbyrRYBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGrryyyYyYyyyyyrRYyyGogGoOgrrrryyyYyYyyyyyOOOoobiivvRrorRyYrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggYYyYyYGGOOooYbiivvvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggOogGoOgrrrryyyYyYyyyyyrRYyyGRrrogbYYyyroroRORbiivvRrORRoorrvRrORRoorrBBBBbbbbBbggGgGgGGvRrORRoorrBBBByrRYbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRggbbiivvRrRrBvIiGggGOOrRYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyryrRYRYyyGOogGoOgrrrryyyYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoOOOoOoOoRrOROYGBIVroygbivBbBbBbOoOoOoRrRrbbBBggGGGGGgggbbbbbBbRrRrRrOrRYyyGOogGoOgrrrryyyYyYyyyyyOOOooRrOoRrGbiivvRrGOGggOgbiivvRrgRrrrGgYyYyyygYyrgYYbBbbb"</p>
+             <p><a id="view" href="marbles.html" target="_blank">View Program >></a></p>
+        </div>
+    </div>
+    </body>
+  <a href="#outbreak">  <i id="top" class="fas fa-angle-double-up"></i></a>
+<footer>
+    <p> <b>Khine Zar Duffy &copy;2020 </b></p>
+    </footer>
+<script>
+    window.onscroll = function () {scroll()};
+    function scroll(){
+        if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+         document.getElementById("back").style.backgroundColor = "rgba(1, 0, 0 , 0.1)";
+         document.getElementById("top").style.display = "block";
+        }
+        else{
+            document.getElementById("back").style.backgroundColor = "transparent";
+            document.getElementById("top").style.display = "none";
+        }
+    }
+   
+    </script>
+</html>

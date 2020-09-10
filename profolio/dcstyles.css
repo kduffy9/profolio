@@ -1,0 +1,500 @@
+
+html,body{
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+header{
+    background-color: aliceblue;
+    width: 100%;
+    height: 95px;
+    position:absolute;
+    top: 0;
+}
+ #logo{
+    padding: 0px 0px 10px 80px;
+    float:left;
+    width: 25%;
+}
+nav> ul  {
+    padding: 40px 0px 30px 0px;
+    width: 100%;
+}
+nav > ul>li{
+    list-style-type: none;
+    float: left;
+    padding: 10px 40px 10px 40px;
+    background-color: lemonchiffon;
+    height: 80px; 
+}
+nav> ul > li >a {
+    text-decoration: none;
+    color: #603711;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+nav> ul> li>a:hover{
+    border-bottom-right-radius: 8px;
+    border-bottom: 5px solid #c56721;
+    color: #c56721;
+}
+main{
+    margin: 150px 0 0 40px;
+    display: block;
+    width: 95%;
+    clear:both;
+    margin-top: 140px;
+}
+.donut{
+     padding: 10px 30px 20px 10px;
+     float: left; 
+}
+#d1{
+    background-image: url(strawberry.png);
+    background-size: contain;
+    width: 330px;
+    height: 330px;
+    animation-name: first_donut;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+}
+#d2{
+    background-image: url(chocCream.png);
+    background-size: contain;
+    width: 330px;
+    height: 330px;
+    animation-name: sec_donut;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+}
+#d3{
+    background-image: url(jelly.png);
+    background-size: contain;
+    width: 330px;
+    height: 330px;
+    animation-name: third_donut;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+}
+#promo {
+    margin-top: 30px;
+    clear:both;
+    font-size: 45px;
+    font-family: 'Baloo Tamma 2', cursive;
+    text-align: center;
+    color: #f52a42;
+}
+@keyframes first_donut {
+    5%{background-image: url(strawberry.png)}
+    60%{background-image: url(chocDonut.png)}
+    100%{background-image: url(bostonCream.png)}
+}
+@keyframes sec_donut {
+    5%{background-image: url(chocCream.png)}
+    60%{background-image: url(whiteDonut.png)}
+    100%{background-image: url(blue.png)}
+}
+@keyframes third_donut {
+    5%{background-image: url(jelly.png)}
+    60%{background-image: url(pinkDonut.png)}
+    100%{background-image: url(mint.png)}
+}
+div.Divider{
+    clear: both;
+    background-color: #EFCFE3;
+    height: 100px;
+    width: 100%;
+}
+h3{
+    padding-top: 30px;
+    display: block;
+    margin: auto;
+    width: 20%;
+    text-align: center;
+    font-size: 33px;
+    color: #603711;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+#DonutMenu{
+    width: 100%;
+}
+.item{
+    padding: 20px 0px 0 20px;
+    margin: 0 0px 0 20px;
+    text-align: center;
+    float: left;
+    font-size: 20px;
+    font-family: 'Baloo Tamma 2', cursive;
+    cursor: pointer;
+}
+.subnav{
+     padding: 40px 20px 0px 10px;
+     margin: 0px 10px 0px 30px;
+}
+.subnav > ul > li{
+    display: inline-block;
+    padding: 0px 20px 0 10px;
+    margin: 0px 20px 0px 0px;
+ }
+.subnav button{
+    color: #f52a42;
+    font-size: 23px;
+    font-weight: bold;
+    text-shadow: 1px 0px grey;
+    border: none;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+}
+.subnav button:hover{
+    color: #603711;
+}
+.hide{
+   display:none;
+}
+@keyframes trans {
+   0%{opacity: 0.1}
+   50%{opacity: 0.5}
+   100%{opacity: 1}
+}
+#overlay{
+   position: fixed;
+   display: none;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0,0,0,0.5);
+}
+#overlay-content{
+   display:block;
+   margin: 40px auto;
+   background-color:#fff;
+   width: 60%;
+   height: 80%;
+   border-radius: 15px;
+}
+#overlay-exit{
+    margin: 32px;
+    color: gray;
+    float: right;
+    cursor: pointer;
+}
+#overlay-img{
+    float: left;
+    margin: 20px;
+}
+#overlay-detail {
+    padding: 10px 0px 0 0px;
+    margin: 10px 0px 0 0px;
+    float: left;
+    font-size: 20px;
+    font-family: 'Baloo Tamma 2', cursive;
+    color: #603711;
+    width: 40%;
+}
+#overlay-description{
+    width: 250px;
+    font-size: 18px;
+    font-family: 'Baloo Tamma 2', cursive;
+   
+}
+#add{
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #f52a42;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+}
+#add:hover{
+    background-color: #603711;
+}
+#add:focus{
+    outline: none;
+}
+/* Quantity Selctor*/
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    width: 35px;
+    padding: 0 5px;
+    text-align: center;
+    border-radius: none;
+    height: 34px;
+   
+}
+#plus{
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 6px 10px 7px;
+    color: grey;
+    margin: 0;
+    justify-content: center;
+    position: relative;
+    left: -5px;
+    border: 1px solid grey;
+    top: 2px;
+
+}
+#plus:hover, #plus:focus{
+    background-color:aliceblue;
+    outline: none;
+    
+}
+#minus{
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 6px 10px 7px;
+    color: grey;
+    margin: 0;
+    justify-content: center;
+    position: relative;
+    right: -5px;
+    border: 1px solid grey;
+    top: 2px;
+}
+#minus:hover, #minus:focus{
+    background-color:aliceblue;
+    outline: none
+}
+iframe{
+    padding: 10px;
+    margin: 30px;
+    float: left;
+}
+#address{
+    float:left;
+    padding-left: 10px;
+    margin: 30px 0 0 30px;
+}
+#address h4{
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+}
+#address p, #address >a{
+    margin-top: 0;
+    font-size: 18px;
+    color: grey;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+/*Check Out*/
+#checkout{
+     margin: 250px auto 50px auto;
+     padding: 30px;
+     width: 65%;
+     border-radius: 15px;
+     box-shadow: 2px 2px 18px grey;
+     color: #603711;
+}
+table{
+    width: 100%;
+}
+th,td {
+     padding: 0px;
+     margin: 0px;
+     width: 40%;
+     text-align: left;
+     vertical-align: middle;
+    
+}
+td > img{
+    float: left;
+}
+td > p {
+     margin-top: 30px;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 13px;
+     
+}
+select{
+    padding: 10px;
+}
+/*Footer*/
+footer{
+    clear:both;
+    background-color: #EFCFE3;
+    bottom: 0;
+    height: 180px;
+}
+#social{
+    padding: 20px 0 0 30px;
+    text-align: center;
+}
+.fa {
+    font-size: 30px;
+    text-decoration: none;
+    padding: 3px;
+}
+footer p{
+   text-align: center;
+}
+#tab{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    nav > ul>li{
+        padding: 22px;
+        height: 40px;
+    }
+    nav> ul > li >a {
+        font-size: 19px;
+    }
+    main{
+        width: 100%;
+    }
+    #d1{
+        width: 200px;
+        height: 200px;
+    }
+    #d2{
+        width: 200px;
+        height: 200px;
+    }
+    #d3{
+        width: 200px;
+        height: 200px;
+    }
+  
+}
+
+/*mobile devices*/
+@media screen and (max-width: 800px) {
+  .nav ul:not(:first-child) {display: none;}
+   .icon.fa ,#tab{
+    float:right;
+    margin: 20px;
+    cursor: pointer;
+    display: block;
+  }
+}
+/*for small screen */
+@media screen and (max-width: 800px){
+  .nav.responsive {
+        position: fixed;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+    }
+   .icon.fa {
+        float:right;
+        margin: 20px;
+        cursor: pointer;
+    }
+   .nav.responsive ul{
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: none;
+    }
+   .nav.responsive li{
+        float: none;
+        clear: both;
+        padding:30px 0 0 30px;
+        background: none;
+       
+    }
+   .nav.responsive a{
+        font-size: 25px;
+       padding: 10px;
+    }
+    main{
+        margin: 140px auto 0 auto;
+    }
+    img.mobile{
+        margin: 30px;
+        display:block;
+    }
+    #overlay-content{
+       width: 100%;
+       height: 80%;
+}
+    #overlay-img{
+       margin: 5px;
+}
+    #menu-img{
+        width: 180px;
+        height: 180px;
+    }
+    #overlay-detail {
+        width: 40%;
+        font-size: 14px;
+    
+    }  
+    #overlay-description{
+        width: 20%;
+        font-size: 13px;
+   
+}
+    #plus,#minus{
+        top: 1px;
+    }
+    button{
+        font-size: 12px;
+        padding: 15px;
+ 
+}
+    #add{
+        font-size: 18px;
+    }
+    .fa{
+        font-size: 18px;
+    }
+
+    main{
+        width: 50%;
+    }
+    .donut{
+        padding: 0;
+    }
+   
+    h3{
+        width: 100%;
+    }
+    .subnav{
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .subnav > ul > li{
+        padding: 2px;
+        margin: 7px;
+    }
+    .subnav button{
+        font-size: 18px;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+}
+/*smaller mobile devices*/
+@media screen and (max-width: 400px){
+    #overlay-detail{
+        width: 100%;
+        margin: 15px;
+    }
+    #add{
+        font-size: 15px;
+    }
+}
+  

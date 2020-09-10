@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>KZD - Deadline Project</title>
+    <meta name="viewport"  content="width=device-width,initial-scale=1">
+    <!----google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--stylesheet-->
+    <link rel="stylesheet" type="text/css" href="profolioSytle.css">
+    
+    </head>
+    <body>
+     <header>
+      <nav>
+        <ul>
+            <li id="back"><a href="profolio.html#projects"><< Back</a></li>
+         </ul>    
+      </nav>
+</header>
+     <div class="projectContent">
+      <div id="deadline-title" class="titleCircle">
+          
+        <h1 class="pTitle">Deadline</h1>
+        <p class="pDetails"> Time Management Tool</p>
+        </div>
+        
+      <img src="login%20copy.png"  alt="Deadline Login Page"> 
+         <div class="summery">
+             <h3><b>Project Summery</b></h3>
+          <p>Deadline is a web application that helps individuals enhance their time management and organisational skills.</p>
+          <p>It was developed as capstone Project for Advanced Software Project Class at Brookdale CC
+             using PHP, Javascript, HTML and CSS.</p>
+            <p> <a id="view" href="">View Details >></a></p>
+        </div>
+    </div>
+    </body>
+      <a href="#deadline-title">  <i id="top" class="fas fa-angle-double-up"></i></a>
+<footer>
+    <p> Khine Zar Duffy &copy;2020 </p>
+    </footer>
+<script>
+    window.onscroll = function () {scroll()};
+    function scroll(){
+        if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+         document.getElementById("back").style.backgroundColor = "rgba(1, 0, 0 , 0.1)";
+         document.getElementById("top").style.display = "block";
+        }
+        else{
+            document.getElementById("back").style.backgroundColor = "transparent";
+            document.getElementById("top").style.display = "none";
+        }
+    }
+   
+    </script>
+</html>

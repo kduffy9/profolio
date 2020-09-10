@@ -1,0 +1,88 @@
+<!--Khine Zar Duffy-->
+<!--Assignment 03-->
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8"> 
+     <title>Assignment 3 Marbles</title>
+</head>
+<body>
+   <canvas id="myCanvas" width=1200 height=1800 style=""></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var x= 10;
+        var y = 20;
+        var marbles = "rrooyyggbbiivvRrRrBggbbiivvRrRrBvIiGggGOOrRYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggOogGoOgrrvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyvIiGggGOOrRrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyggbbiivvRrRrBvIiGggGOOrRYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbyrRYBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGrryyyYyYyyyyyrRYyyGogGoOgrrrryyyYyYyyyyyOOOoobiivvRrorRyYrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggYYyYyYGGOOooYbiivvvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyrRYyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggOogGoOgrrrryyyYyYyyyyyrRYyyGRrrogbYYyyroroRORbiivvRrORRoorrvRrORRoorrBBBBbbbbBbggGgGgGGvRrORRoorrBBBByrRYbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRggbbiivvRrRrBvIiGggGOOrRYyyGOvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrvRrORRoorrBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyryrRYRYyyGOogGoOgrrrryyyYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGBBBBbbbbBbggGgGgGGgoYYoyYoYIIIIiiIiIiBigBigBbIrrRYyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoyGOogGoOgrrrryyyYyYyyyyyrRYyyGOogGoOgrrrryyyYyYyyyyyOOOoOOOoOoOoRrOROYGBIVroygbivBbBbBbOoOoOoRrRrbbBBggGGGGGgggbbbbbBbRrRrRrOrRYyyGOogGoOgrrrryyyYyYyyyyyOOOooRrOoRrGbiivvRrGOGggOgbiivvRrgRrrrGgYyYyyygYyrgYYbBbbb";
+        var new_length =marbles.length;
+     
+    function draw_smallMarble(color,char){
+     if(marbles.charAt(i) == char){
+        ctx.beginPath();
+        if(x>=1150||x<10){
+        y+=30;
+        x=17;
+            }
+        //adjust the gap between big marble and small marble
+     if(marbles.charAt(i-1).match(/R|O|Y|G|B|I|V/)){
+           x-=9;
+        }
+        ctx.arc(x,y,8,0,Math.PI*2);
+        ctx.fillStyle= color;
+        ctx.fill();
+        ctx.closePath();
+        x+=17;
+       }
+       }
+    function draw_bigMarble(color,char){
+     if(marbles.charAt(i) == char){
+        ctx.beginPath();
+     if(x>=1150||x<10){
+        y+=30;
+        x=17;
+            }  
+        //adjust the gap between small marble and big marble    
+     if(marbles.charAt(i-1).match(/r|o|y|g|b|i|v/)){
+        x+=7;
+     }
+        ctx.arc(x,y,15,0,Math.PI*2);
+        ctx.fillStyle= color;
+        ctx.fill();
+        ctx.closePath();
+        x+=31; 
+     }
+        } 
+     function reduce(pattern){
+        marbles = marbles.replace(pattern, ""); 
+        new_length-=2;
+        ctx.clearRect(0,0,1200,1800); 
+        x=17;
+        y=20;
+        }  
+     function draw(){
+      for(i=0;i<marbles.length;i++){
+        draw_bigMarble("red","R");
+        draw_bigMarble("blue","B");
+        draw_bigMarble("orange","O");
+        draw_bigMarble("Yellow","Y");
+        draw_bigMarble("Green","G");
+        draw_bigMarble("Indigo","I");
+        draw_bigMarble("Violet","V");
+        draw_smallMarble("red", "r");
+        draw_smallMarble("orange", "o");
+        draw_smallMarble("yellow", "y");
+        draw_smallMarble("green", "g");
+        draw_smallMarble("indigo", "i");
+        draw_smallMarble("violet", "v");
+        draw_smallMarble("blue", "b");
+       }
+     }
+      if (new_length < marbles.length) {
+            clearInterval(reduce_id);
+        }
+var reduce_id = setInterval(function() { reduce(/Rr|rR|Oo|oO|Yy|yY|Gg|gG|Bb|bB|Ii|iI|Vv|vV/); draw(); },50);
+
+ 
+    </script>
+</body>
+    </html>

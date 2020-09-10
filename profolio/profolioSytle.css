@@ -1,0 +1,278 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background: #f6f4e6;
+    color: #3c2946;
+    font-family: 'Lexend Peta', sans-serif;
+    word-spacing: 5px;
+}
+a{
+    text-decoration: none;
+    color: #3c2946;
+}
+nav{
+    position: fixed;
+    top: 20px;
+    left: 50px;
+  }
+ul>li{
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+
+}
+li>a{
+    font-family: 'Lexend Peta', sans-serif;
+    text-align: right;
+}
+li>a:hover,#top:hover{
+    color: #158467;
+}
+#view:hover{
+    background-color: rgba(1, 0, 0, 0.1);
+    padding: 10px;
+    color: #158467;
+}
+#yellow{
+    margin: 7% 3% 0 5%;
+    float: left;
+    background: #ffd571;
+    width: 350px;
+    height: 550px;
+}
+#NameSection{
+    padding: 5% 0 0 0;
+    font-size: 40px;
+    color: #1f3907;
+    font-family: 'Ariel', sans-serif;
+}
+
+#duffy {
+    text-align: right;
+    position: relative;
+    right: 370px;
+    top: -40px;
+}
+
+p{
+    font-size: 12px;
+
+}
+small{
+    left: 30px;
+    position: relative;
+    font-size: 10px;
+}
+#projects{
+    margin-bottom: 100px;
+    height: 700px;
+
+}
+#titlebox{
+    float: right;
+    margin: 120px 35px 180px 0px;
+    border-top-right-radius: 55%;
+    border-bottom-left-radius: 55%;
+    width: 25%;
+    height: 150px;
+    background-color: #bbd196;
+}
+#titlebox > p {
+    text-align: center;
+    position: relative;
+    top: 40px;
+    left: 26px;
+    font-size: 20px;
+    color: #56556e;
+}
+
+#deadline{
+    clear: both;
+    float: left;
+    width: 70%;
+    height: 80px;
+    background: #3c2946;
+    text-align: center;
+    transition: width 1s;  
+}
+#deadline:hover{
+    width: 100%;
+  
+}
+.project-text {
+    position: relative;
+    color: #f6f4e6;
+    text-decoration: none;
+    top: 20px;
+    font-size: 16px;
+    
+}
+#donut{
+    clear: both;
+    float: right;
+    width: 80%;
+    height: 80px;
+    background: #56556e;
+    text-align: center;
+    transition: width 1s;
+}
+#donut:hover{
+    width: 100%;
+}
+#schoolProject{
+    clear: both;
+    float: left;
+    width: 80%;
+    height: 80px;
+    background: #ffd571;
+    text-align: center;
+    transition: width 1s;
+}
+#schoolProject:hover{
+    width: 100%;
+}
+#schoolProject > a{
+    color: #3c2946;
+    position: relative;
+    top: 20px;
+}
+
+#scarlett{
+    clear: both;
+    float: right;
+    width: 70%;
+    height: 80px;
+    background: #7e0450;
+    text-align: center;
+    transition: width 1s;
+}
+#scarlett:hover{
+    width: 100%;
+}
+footer{
+    text-align: center;
+    margin-top: 8%;
+}
+/*Deadline*/
+#deadline-title{
+    background-color: #1e5f74;
+}
+.titleCircle{
+    height: 380px;
+    width: 380px;
+    border-radius: 50%;
+    float: right;
+    margin: 3% 8% 2% 0;
+    text-align: center;
+    color: #fff;
+  
+}
+.pTitle{
+    position: relative;
+    top: 140px;
+    left: 20px;
+}
+.pDetails{
+    position: relative;
+    top: 140px;
+    left: 10px;
+}
+.summery{
+    margin: 5% 0 4% 14%;
+    width: 80%;
+    word-wrap: break-word;
+    line-height: 33px;
+}
+.summery p{
+    font-size: 15px;
+}
+img{
+    clear: both;
+    width: 50%;
+    margin: 15% 0 0 4%;
+}
+/*Donut*/
+#donut-title{
+    background-color: #eb8f8f;
+}
+/*Scarlett Store*/
+#scarlett-title{
+    background-color: #b52b65;
+}
+/*marbles*/
+#marbles{
+    background-color: #59405c;
+}
+.problem{
+    color: darkgreen;
+    font-family: 'Ariel', sans-serif;
+}
+/*Outbreak*/
+#outbreak{
+    background-color: #ed6663;
+}
+#top{
+    display: none;
+    background-color: rgba(1, 0, 0, 0.1);
+    float: right;
+    position: sticky;
+    bottom: 0;
+    padding: 14px;
+    margin-right: 20px;
+
+}
+
+/*mobile devices*/
+@media screen and (max-width: 1100px){
+    nav{
+        position: static;
+    }
+    #yellow{
+        float: none;
+        height: 460px;
+        width: 90%;
+    }
+    #NameSection{
+        padding-left: 30px;
+        font-size: 25px;
+    }
+    #duffy{
+        text-align: left;
+        position: static;
+      
+    }
+    #About{
+        width: 60%;
+        padding: 25px;
+
+    }
+    small{
+       position: static;
+       margin-left: 50px;
+    }
+    #titlebox{
+        width: 350px;
+        margin: 80px auto 140px auto;
+        float: none;
+    }
+    #titlebox > p {
+    text-align: center;
+    top: 50px;
+    font-size: 20px;
+    color: #56556e;
+    }
+    #titleCircle{
+       float: none;
+       margin-left: 5%;
+        
+    }
+    img{
+        width: 90%;
+    }
+    .summery p{
+        font-size: 13px;
+    }
+    .project-text{
+        font-size: 13px;
+    }
+}
